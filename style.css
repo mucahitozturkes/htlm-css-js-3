@@ -1,0 +1,217 @@
+:root {
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body {
+    font-family: "Kumbh Sans";
+    display: grid;
+    margin: 0;
+    padding: 0;
+    place-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to top, var(--Soft-blue), var(--Soft-violet));
+}
+
+main {
+    margin-top: 40%;
+}
+
+.main-wrapper {
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.369);
+    border-radius: 2rem;
+    background-color: white;
+    margin: 1rem;
+    max-width: 360px;
+    width: 100%;
+
+}
+
+.main-container {
+    padding: 1.5rem;
+
+}
+
+.image-top {
+    margin-top: -49%;
+    margin-bottom: 2rem;
+    padding-inline: 1rem;
+}
+
+.bg-shadow {
+    margin-top: -30%;
+    width: 100%;
+}
+
+.bg-shadow-desktop {
+    display: none;
+}
+
+.desktop {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.accordions {
+    padding-block: 2rem;
+    padding-right: 2rem;
+}
+
+.q-stack {
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 1rem;
+    gap: 2rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+.question {
+    font-weight: 300;
+    font-size: .85rem;
+    color: var(--Very-dark-grayish-blue);
+
+}
+
+.question:hover {
+    color: var(--Soft-red);
+    cursor: pointer;
+
+}
+
+.text {
+    font-size: .85rem;
+    color: var(--Dark-grayish-blue);
+    font-weight: 300;
+}
+
+hr {
+    opacity: 0.3;
+    margin-block: 1rem;
+}
+
+.text {
+    display: none;
+}
+
+.show .text {
+    display: inline;
+}
+
+.flip-icon .button {
+    transform: scaleY(-1);
+    cursor: pointer;
+}
+
+.box {
+    display: none;
+}
+
+.question-bold .question {
+    font-weight: 700;
+}
+
+@media (min-width: 600px) {
+
+    .main-wrapper {
+        max-width: unset;
+        width: unset;
+    }
+
+    .image-top {
+        display: grid;
+        place-content: center;
+        margin-top: -30%;
+        margin-bottom: 2rem;
+        padding-inline: 1rem;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobil {
+        display: grid;
+
+    }
+
+    .image-top img {
+        width: 350px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .main-container {
+        display: flex;
+        overflow: hidden;
+
+    }
+
+    .accordions {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .image-top {
+        margin-top: unset;
+        margin-bottom: unset;
+        margin-left: -5.5rem;
+        padding-inline: 0rem;
+        align-items: center;
+
+    }
+
+    .image-top img {
+        width: 350px;
+        padding-right: 4rem;
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    .bg-shadow {
+        display: none;
+        z-index: -1;
+    }
+
+    .desktop {
+        display: block;
+        z-index: 0;
+
+    }
+
+    .mobil {
+        display: none;
+
+    }
+
+    .box {
+        display: block;
+        scale: .5;
+        z-index: 4;
+        position: absolute;
+        margin-left: -150px;
+        margin-top: 50px;
+    }
+
+    .image-top .bg-shadow-desktop {
+        display: block;
+        position: absolute;
+        margin-top: -60px;
+        width: 600px;
+        margin-left: -250px
+    }
+}
